@@ -1,0 +1,107 @@
+.footer{
+    padding: 50px;
+    background: #33353C;
+    color: var(--white);
+    overflow: hidden;
+    &__inner{
+        position: relative;
+        z-index: 0;
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: -70px;
+            right: 0;
+            height: calc(100% + 50px + 20px);
+            aspect-ratio: 16/10;
+            background-image: url("../images/footer_img.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &__header{
+        display: flex;
+        align-items: center;
+        gap: 44px;
+    }
+    &__header-logo{
+        max-width: 309px;
+    }
+    &__menu{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        //Text
+        font-weight: 500;
+        font-size: 16px;
+    }
+    &__contacts{
+        margin-top: 42px;
+        display: flex;
+        align-items: center;
+        gap: 36px;
+    }
+    &__call-wrapper{
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 10px;
+        padding: 20px 20px 20px 40px;
+        display: flex;
+        align-items: center;
+        gap: 43px;
+    }
+    &__call{
+        font-weight: 500;
+        font-size: 20px;
+    }
+    &__call-btn{
+        background: var(--primary);
+        border-radius: 6px;
+        padding: 12px 20px;
+        //Text
+        font-weight: 500;
+    }
+    &__email{
+        text-decoration: underline;
+        text-decoration-color: var(--primary);
+    }
+    &__info{
+        margin-top: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 26px;
+    }
+    &__address{
+        opacity: .6;
+    }
+    &__info nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        //Text
+        line-height: 1.1;
+        a{
+            text-decoration: underline;
+            text-decoration-color: var(--primary);
+        }
+    }
+    &__bottom{
+        margin-top: 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        //Text
+        font-size: 12px;
+    }
+    &__copyright{
+        opacity: .6;
+    }
+    &__mark{
+        max-width: 315px;
+        opacity: .5;
+        //Text
+        text-align: right;
+    }
+}

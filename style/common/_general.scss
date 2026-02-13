@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    height: 100%;
+    //Text
+	font-family: 'TikTok Sans';
+    font-size: 14px;
+	&.popup-open{
+		overflow: hidden;
+	}
+}
+
+.app-content{
+    width: 100%;
+	height: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+main{
+	flex: 1 1 auto;
+}
+
+.container{
+	width: 100%;
+	padding: 0 24px;
+}
