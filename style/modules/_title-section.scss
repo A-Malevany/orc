@@ -1,0 +1,16 @@
+.title-section{
+    font-weight: 500;
+    font-size: 32px;
+    @media (max-width: 1400px){
+        font-size: 30px;
+    }
+    @media (max-width: 1112px){
+        font-size: 28px;
+    }
+    @media (max-width: 1000px){
+        font-size: 26px;
+    }
+    @media (max-width: 600px){
+        font-size: 24px;
+    }
+}

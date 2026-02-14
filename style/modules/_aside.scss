@@ -1,11 +1,20 @@
 .sidebar{
     flex: 0 0 470px;
     background: var(--bg-gray);
-    padding: 24px;
+    padding: var(--spacing24);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
+    @media (max-width: 1900px){
+        flex: 0 0 350px;
+    }
+    @media (max-width: 1600px){
+        flex: 0 0 300px;
+    }
+    @media (max-width: 1400px){
+        display: none;
+    }
     &__logo{
         max-width: 334px;
         margin: 0 auto;
@@ -30,6 +39,9 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 50px;
+        @media (max-width: 1600px){
+            gap: 30px;
+        }
     }
     &__section{
         display: flex;
@@ -38,15 +50,22 @@
         gap: 50px;
         //Text
         color: var(--dark);
+        @media (max-width: 1600px){
+            gap: 30px;
+        }
     }
     &__title{
         font-weight: 500;
+        font-size: 16px;
     }
     &__list{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
+        @media (max-width: 1600px){
+            gap: 20px;
+        }
     }
     &__link{
         display: flex;
@@ -54,7 +73,7 @@
         gap: 18px;
     }
     &__icon{
-        width: 24px;
+        width: var(--spacing24);
         aspect-ratio: 4/4;
         flex-shrink: 1;
         svg{
@@ -71,5 +90,8 @@
         width: 100%;
         margin: 0 auto;
         margin-top: 20px;
+        @media (max-width: 1600px){
+            margin-top: 0;
+        }
     }
 }

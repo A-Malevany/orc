@@ -1,0 +1,91 @@
+.video{
+    padding: var(--spacing24) 0;
+    @media (max-width: 1000px){
+        padding: 60px 0;
+        padding-top: 0;
+        .container{
+            padding: 0;
+        }
+    }
+    &__inner{
+        padding: 58px;
+        border-radius: 16px;
+        background: #2d2f35;
+        @media (max-width: 1600px){
+            padding: 40px;
+        }
+        @media (max-width: 1000px){
+            border-radius: 0;
+        }
+        @media (max-width: 600px){
+            padding: 40px 20px;
+        }
+    }
+    &__wrapper{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    video{
+        cursor: pointer;
+        max-width: 85%;
+        width: 100%;
+        aspect-ratio: 16/7.4;
+        object-fit: cover;
+        border-radius: 20px;
+        @media (min-width: 1920px){
+            max-width: 1300px;
+        }
+        @media (max-width: 1600px){
+            max-width: 100%;
+            aspect-ratio: 16/8;
+        }
+        @media (max-width: 1400px){
+        }
+        @media (max-width: 600px){
+            aspect-ratio: 16/10;
+        }
+    }
+    &__play{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 160px;
+        aspect-ratio: 4/4;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.51);
+        backdrop-filter: blur(16px);
+        transition: .3s ease;
+        pointer-events: none;
+        @media (max-width: 1600px){
+            width: 130px;
+        }
+        @media (max-width: 1000px){
+            width: 120px;
+        }
+        @media (max-width: 600px){
+            width: 90px;
+        }
+        &.active{
+            opacity: 0;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            aspect-ratio: 4/4;
+            background-image: url("../images/icons/play.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @media (max-width: 600px){
+                width: 36px;
+            }
+        }
+    }
+}

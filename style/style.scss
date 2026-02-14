@@ -1,5 +1,6 @@
 @import './common/var';
 @import './common/nullstyle';
+@import './common/swiper-bundle.min';
 @import './common/fonts';
 @import './common/general';
 @import './common/header';
@@ -9,7 +10,16 @@
 @import './modules/popup';
 @import './modules/title-section';
 @import './modules/btn';
+@import './modules/swiper-nav';
 @import './modules/aside';
+@import './modules/calculation-form';
 
 //Front
-@import './pages/front/hero';
+@import './pages/front/promo';
+@import './pages/front/catalog-front';
+@import './pages/front/services-front';
+@import './pages/front/about-us-front';
+@import './pages/front/video';
+@import './pages/front/delivery';
+@import './pages/front/advantages';
+@import './pages/front/faq';

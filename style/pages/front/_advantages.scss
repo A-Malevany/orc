@@ -1,0 +1,83 @@
+.advantages{
+    padding: var(--spacing24) 0;
+    @media (max-width: 1000px){
+        padding: 60px 0;
+        padding-top: 0;
+        .container{
+            padding: 0;
+        }
+    }
+    &__inner{
+        background: #272930;
+        border-radius: 16px;
+        overflow: hidden;
+        padding: 110px 90px;
+        background-image: url("../images/advantages_bg.svg");
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        //Text
+        color: var(--white);
+        @media (max-width: 1600px){
+            padding: 100px 40px;
+        }
+        @media (max-width: 1000px){
+            border-radius: 0;
+        }
+        @media (max-width: 600px){
+            padding: 60px 20px;
+        }
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 1fr));
+        gap: 80px;
+        @media (max-width: 1280px){
+            gap: 60px 20px;
+        }
+        @media (max-width: 1000px){
+            grid-template-columns: repeat(2, minmax(auto, 1fr));        
+        }
+        @media (max-width: 600px){
+            grid-template-columns: repeat(1, minmax(auto, 1fr));        
+            gap: 30px;
+        }
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        &-icon{
+            width: 72px;
+            aspect-ratio: 4/4;
+            flex-shrink: 0;
+            backdrop-filter: blur(42.099998474121094px);
+            background: #3b3f4b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 9px;
+                right: -6px;
+                width: 26px;
+                aspect-ratio: 4/3.2;
+                background-image: url("../images/icons/advantages_check.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+        &-title{
+            max-width: 254px;
+            //Text
+            font-size: 16px;
+            @media (max-width: 600px){
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.swiper-button-prev, .swiper-button-next{
+    all: unset;
+    display: block;
+    margin: 0 !important;
+    position: static;
+    font-size: 0;
+    opacity: 1 !important;
+    cursor: pointer;
+    svg{
+        display: none;
+    }
+    //style
+    min-width: 109px;
+    aspect-ratio: 16/6.1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.swiper-button-prev{
+    background-image: url("../images/icons/promo_prev.svg");
+}
+
+.swiper-button-next{
+    background-image: url("../images/icons/promo_next.svg");
+}
+
+.swiper-pagination{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    .swiper-pagination-bullet{
+        opacity: 1 !important;
+        margin: 0 !important;
+        position: relative;
+        transition: .3s ease;
+        //Style
+        width: 8px;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.5);
+        &.swiper-pagination-bullet-active{
+            background: var(--white);
+            &::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 22px;
+                aspect-ratio: 4/4;
+                border-radius: 50%;
+                border: 1px solid var(--white);
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+}

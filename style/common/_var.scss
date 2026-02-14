@@ -5,4 +5,9 @@
     --white: #FFFFFF;
     --dark: #383838;
     --bg-gray: #EDF1F5;
+
+    --spacing24: 24px;
+    @media (max-width: 600px){
+        --spacing24: 20px;
+    }
 }
