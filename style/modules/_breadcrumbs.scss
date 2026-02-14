@@ -1,0 +1,37 @@
+.breadcrumbs{
+    padding: 30px 0;
+    border-bottom: 1px solid #edf1f5;
+    @media (max-width: 600px){
+        padding: 20px 0;
+    }
+    &__nav{
+        overflow-x: auto;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing24);
+        padding-left: 20px;
+        //Text
+        white-space: nowrap;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        @media (max-width: 1400px){
+            padding-left: 0;
+        }
+        svg{
+            flex-shrink: 0;
+        }
+        a{
+            &:first-child{
+                display: flex;
+                align-items: center;
+                gap: var(--spacing24);
+            }
+            @media (any-hover: hover){
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

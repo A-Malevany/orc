@@ -1,3 +1,9 @@
+.calculation-form + .about-us-front{
+    @media (max-width: 1000px){
+        padding-top: 0;
+    }
+}
+
 .calculation-form{
     // padding: var(--spacing24) 0;
     padding: 80px 0 var(--spacing24) 0;

@@ -27,15 +27,17 @@ function initVideoFront() {
     const btn = document.querySelector('.video__play');
     const video = document.querySelector('.video video');
 
-    video.addEventListener('click', () => {
-        btn.classList.toggle('active');
+    if ( video && btn ) {
+        video.addEventListener('click', () => {
+            btn.classList.toggle('active');
 
-        if ( video.paused ) {
-            video.play();
-        } else {
-            video.pause();
-        }
-    })
+            if ( video.paused ) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        })
+    }
 }
 initVideoFront();
 
@@ -56,3 +58,62 @@ function handleFileSelect() {
     }
 }
 handleFileSelect();
+
+function initCounterProduct() {
+    const remove = document.querySelectorAll('.product-count .remove');
+    const add = document.querySelectorAll('.product-count .add');
+
+    remove.forEach(element => {
+        element.addEventListener('click', (e) => {
+            const wrapper = e.currentTarget.closest('.product-count');
+            if (!wrapper) return;
+
+            const input = wrapper.querySelector('input[name=count-product]');
+            if (!input) return;
+
+            let currentValue = parseInt(input.value) || 0;
+
+            if (currentValue > 1) {
+                input.value = currentValue - 1;
+            }
+        })
+    });
+
+    add.forEach(element => {
+        element.addEventListener('click', (e) => {
+            const wrapper = e.currentTarget.closest('.product-count');
+            if (!wrapper) return;
+
+            const input = wrapper.querySelector('input[name=count-product]');
+            if (!input) return;
+
+            let currentValue = parseInt(input.value) || 0;
+
+            if (currentValue >= 1) {
+                input.value = currentValue + 1;
+            }
+        })
+    });
+}
+initCounterProduct();
+
+function initProductCodeCopy() {
+    const codeElements = document.querySelectorAll('.product-item__code');
+
+    codeElements.forEach(el => {
+        el.addEventListener('click', async (e) => {
+            const textToCopy = e.currentTarget.textContent.trim();
+
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                
+                el.classList.add('is-copied');
+                setTimeout(() => el.classList.remove('is-copied'), 200);
+
+            } catch (err) {
+                console.error('Не удалось скопировать:', err);
+            }
+        });
+    });
+}
+initProductCodeCopy();

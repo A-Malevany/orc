@@ -13,6 +13,8 @@
 @import './modules/swiper-nav';
 @import './modules/aside';
 @import './modules/calculation-form';
+@import './modules/breadcrumbs';
+@import './modules/product-item';
 
 //Front
 @import './pages/front/promo';
@@ -23,3 +25,6 @@
 @import './pages/front/delivery';
 @import './pages/front/advantages';
 @import './pages/front/faq';
+
+//Catalog
+@import './pages/catalog/catalog';
