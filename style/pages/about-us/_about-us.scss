@@ -1,0 +1,39 @@
+.about-us{
+        padding: 36px 0 80px 0;
+        @media (max-width: 1000px){
+            padding: 36px 0 60px 0;
+        }
+        .title-section{
+            margin-bottom: 24px;
+        }
+        &__img{
+            display: block;
+            max-width: 1398px;
+            margin: 0 auto;
+            border-radius: 10px;
+            aspect-ratio: 16/6.3;
+            @media (max-width: 1000px){
+                aspect-ratio: 16/8;
+            }
+            @media (max-width: 600px){
+                aspect-ratio: 16/16;            
+            }
+        }
+        &__body{
+            padding-top: 80px;
+            max-width: 1082px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            //Text
+            color: var(--dark);
+            a{
+                text-decoration: underline;
+            }
+            @media (max-width: 1600px){
+                padding-top: 60px;
+            }
+        }
+}

@@ -51,27 +51,6 @@
         display: flex;
         gap: 10px;
     }
-    &__count{
-        background: var(--bg-gray);
-        border-radius: 5px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        input{
-            appearance: none;
-            width: 40px;
-            text-align: center;
-            background: transparent;
-        }
-        button{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            aspect-ratio: 4/4;
-            padding: 14px;
-        }
-    }
     &__add{
         flex: 1 1 auto;
         background: var(--primary);
@@ -79,8 +58,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: .3s ease;
         //Text
         text-align: center;
         color: var(--white);
+        @media (any-hover: hover){
+            &:hover{
+                background: var(--primary-dark);
+            }
+        }
     }
 }

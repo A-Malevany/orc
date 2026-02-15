@@ -1,0 +1,22 @@
+.similar-products{
+    padding-bottom: 80px;
+    @media (max-width: 1000px){
+        padding-bottom: 60px;
+    }
+    .title-section{
+        margin-bottom: 30px;
+    }
+
+    &__items{
+        max-width: 1398px;
+        margin: 0 auto;
+        @media (min-width: 1600px){
+            display: grid;
+            grid-template-columns: repeat(4, minmax(auto, 1fr));
+            gap: var(--spacing24);
+        }
+    }
+    .swiper-pagination{
+        margin-top: 20px;
+    }
+}

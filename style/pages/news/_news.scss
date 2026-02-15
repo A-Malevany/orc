@@ -1,0 +1,96 @@
+.news{
+    padding: 36px 0 80px 0;
+    @media (max-width: 1000px){
+        padding: 36px 0 60px 0;
+    }
+    .title-section{
+        margin-bottom: 24px;
+    }
+    &__img{
+        display: block;
+        max-width: 1398px;
+        margin: 0 auto;
+        border-radius: 10px;
+        aspect-ratio: 16/6.3;
+        @media (max-width: 1000px){
+            aspect-ratio: 16/8;
+        }
+        @media (max-width: 600px){
+            aspect-ratio: 16/16;            
+        }
+    }
+    &__body{
+        padding-top: 24px;
+        max-width: 1082px;
+        margin: 0 auto;
+    }
+    &__date{
+        opacity: .7;
+        margin-bottom: 10px;
+        //Text
+        font-weight: 500;
+        font-size: 10px;
+        color: var(--dark);
+    }
+    &__title{
+        margin-bottom: 60px;
+        //Text
+        font-weight: 500;
+        font-size: 24px;
+        @media (max-width: 1280px){
+            font-size: 21px;
+        }
+        @media (max-width: 1000px){
+            font-size: 20px;
+        }
+        @media (max-width: 600px){
+            margin-bottom: 40px;
+        }
+    }
+    &__dscr{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        //Text
+        color: var(--dark);
+        a{
+            text-decoration: underline;
+        }
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 1fr));
+        gap: var(--spacing24);
+        @media (min-width: 2100px){
+            grid-template-columns: repeat(4, minmax(auto, 1fr));
+        }
+        @media (max-width: 1000px){
+            grid-template-columns: repeat(2, minmax(auto, 1fr));        
+        }
+        @media (max-width: 600px){
+            grid-template-columns: repeat(1, minmax(auto, 1fr));            
+        }
+    }
+    &__add{
+        display: block;
+        width: max-content;
+        margin: 0 auto;
+        margin-top: 60px;
+        background: #9ba8b5;
+        border-radius: 42px;
+        padding: 18px 30px;
+        transition: .3s ease;
+        //Text
+        font-weight: 500;
+        color: var(--white);
+        @media (any-hover: hover){
+            &:hover{
+                background: #8696a6;
+            }
+        }
+        @media (max-width: 600px){
+            margin-top: 40px;
+        }
+    }
+}

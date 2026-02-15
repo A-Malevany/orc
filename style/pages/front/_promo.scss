@@ -119,5 +119,16 @@
                 display: none;
             }
         }
+        .swiper-pagination{
+            .swiper-pagination-bullet{
+                background: rgba(255, 255, 255, 0.5);
+                &.swiper-pagination-bullet-active{
+                    background: var(--white);
+                    &::before{
+                        border-color: rgba(255, 255, 255, 0.2);
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,22 @@
+.similar-news{
+    padding-bottom: 80px;
+    @media (max-width: 1000px){
+        padding-bottom: 60px;
+    }
+    .title-section{
+        margin-bottom: var(--spacing24);
+    }
+    &__items{
+        max-width: 1398px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 1fr));
+        gap: var(--spacing24);
+        @media (max-width: 1000px){
+            grid-template-columns: repeat(2, minmax(auto, 1fr));        
+        }
+        @media (max-width: 600px){
+            grid-template-columns: repeat(1, minmax(auto, 1fr));            
+        }
+    }
+}

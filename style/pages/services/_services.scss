@@ -1,0 +1,97 @@
+.services{
+    padding: 36px 0 80px 0;
+    @media (max-width: 1000px){
+        padding: 36px 0 60px 0;
+    }
+    .title-section{
+        margin-bottom: 24px;
+    }
+    &__img{
+        max-width: 1398px;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 42px;
+            right: 34px;
+            width: 334px;
+            aspect-ratio: 16/4.6;
+            background-image: url("../images/logo-white.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @media (max-width: 1280px){
+                bottom: 30px;
+                right: 30px;
+                width: 280px;
+            }
+            @media (max-width: 600px){
+                bottom: 10px;
+                right: 10px;
+                width: 200px;
+            }
+        }
+        img{
+            display: block;
+            aspect-ratio: 16/7.8;
+            @media (max-width: 1000px){
+                aspect-ratio: 16/12;            
+            }
+            @media (max-width: 600px){
+                aspect-ratio: 16/16;
+            }
+        }
+    }
+    &__body{
+        padding-top: 80px;
+        max-width: 1082px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        //Text
+        color: var(--dark);
+        @media (max-width: 1000px){
+            padding-top: 60px;
+        }
+        a{
+            text-decoration: underline;
+        }
+    }
+    &__items{
+        max-width: 1082px;
+        margin: 0 auto;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        @media (max-width: 600px){
+            margin-top: 30px;
+        }
+    }
+    &__item{
+        &-title{
+            margin-bottom: 40px;
+            //Text
+            font-weight: 500;
+            font-size: 24px;
+            @media (max-width: 1280px){
+                font-size: 21px;
+            }
+            @media (max-width: 1000px){
+                font-size: 20px;
+            }
+            @media (max-width: 600px){
+                margin-bottom: 30px;
+            }
+        }
+        &-dscr{
+            color: var(--dark);
+        }
+    }
+}

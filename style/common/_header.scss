@@ -101,6 +101,11 @@
         font-weight: 500;
         font-size: 16px;
         white-space: nowrap;
+        @media (any-hover: hover){
+            &:hover{
+                text-decoration: underline;
+            }
+        }
         @media (max-width: 1270px){
             display: none;
         }
@@ -110,8 +115,8 @@
             display: none;
         }
         a{
-            text-decoration: underline;
-            text-decoration-color: var(--primary);
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--primary);
         }
     }
     &__btns{
@@ -129,6 +134,12 @@
         background: var(--bg-gray);
         border-radius: 8px;
         padding: 13px 20px;
+        transition: .3s ease;
+        @media (any-hover: hover){
+            &:hover{
+                background: var(--bg-gray-dark);
+            }
+        }
         @media (max-width: 1600px){
             display: none;
         }
@@ -140,9 +151,15 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        transition: .3s ease;
         //Text
         font-weight: 500;
         color: var(--white);
+        @media (any-hover: hover){
+            &:hover{
+                background: var(--red-dark);
+            }
+        }
         @media (max-width: 600px){
             font-size: 0;
             padding: 10px;
@@ -205,6 +222,7 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
+        transition: .3s ease;
         //Text
         font-weight: 500;
         font-size: 16px;
@@ -219,6 +237,11 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        @media (any-hover: hover){
+            &:hover{
+                background: var(--primary-dark);
+            }
+        }
         @media (max-width: 1600px){
             padding: 11px 20px;
         }
@@ -232,6 +255,13 @@
         white-space: nowrap;
         @media (max-width: 1600px){
             gap: var(--spacing24);
+        }
+        a{
+            @media (any-hover: hover){
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }

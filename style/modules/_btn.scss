@@ -2,11 +2,17 @@
     background: var(--red);
     border-radius: 8px;
     padding: 20px;
+    transition: .3s ease;
     //Text
     font-weight: 500;
     font-size: 16px;
     text-align: center;
     color: var(--white);
+    @media (any-hover: hover){
+        &:hover{
+            background: var(--red-dark);
+        }
+    }
     @media (max-width: 1600px){
         padding: 18px 16px;
         font-size: 14px;

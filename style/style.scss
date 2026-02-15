@@ -15,6 +15,8 @@
 @import './modules/calculation-form';
 @import './modules/breadcrumbs';
 @import './modules/product-item';
+@import './modules/product-count';
+@import './modules/news-item';
 
 //Front
 @import './pages/front/promo';
@@ -28,3 +30,21 @@
 
 //Catalog
 @import './pages/catalog/catalog';
+
+//Services
+@import './pages/services/services';
+
+//News
+@import './pages/news/news';
+@import './pages/news/similar-news';
+
+//About us
+@import './pages/about-us/about-us';
+
+//Product card
+@import './pages/product-card/product-card';
+@import './pages/product-card/product-info';
+@import './pages/product-card/similar-products';
+
+//Cart
+@import './pages/cart/cart-empty';
