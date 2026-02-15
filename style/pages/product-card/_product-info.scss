@@ -7,9 +7,9 @@
         padding-top: 0;
     }
     &__inner{
-        max-width: 1398px;
-        width: 100%;
-        margin: 0 auto;
+        // max-width: 1398px;
+        // width: 100%;
+        // margin: 0 auto;
         display: grid;
         grid-template-columns: minmax(0, 2.05fr) minmax(0, 1fr);
         gap: var(--spacing24);

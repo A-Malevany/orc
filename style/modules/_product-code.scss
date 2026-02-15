@@ -1,0 +1,18 @@
+.product-code{
+    cursor: pointer;
+    opacity: .4;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: .2s ease;
+    //Text
+    font-weight: 500;
+    font-size: 10px;
+    &.is-copied{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    svg{
+        flex-shrink: 0;
+    }
+}

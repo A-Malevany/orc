@@ -7,16 +7,17 @@
         margin-bottom: var(--spacing24);
     }
     &__items{
-        max-width: 1398px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(auto, 1fr));
-        gap: var(--spacing24);
-        @media (max-width: 1000px){
-            grid-template-columns: repeat(2, minmax(auto, 1fr));        
+        @media (min-width: 1000px){
+            display: grid;
+            grid-template-columns: repeat(3, minmax(auto, 1fr));
+            gap: var(--spacing24);
         }
-        @media (max-width: 600px){
-            grid-template-columns: repeat(1, minmax(auto, 1fr));            
+    }
+    .swiper-pagination{
+        margin-top: 20px;
+        display: none;
+        @media (max-width: 1000px){
+            display: flex;
         }
     }
 }

@@ -98,7 +98,7 @@ function initCounterProduct() {
 initCounterProduct();
 
 function initProductCodeCopy() {
-    const codeElements = document.querySelectorAll('.product-item__code');
+    const codeElements = document.querySelectorAll('.product-code');
 
     codeElements.forEach(el => {
         el.addEventListener('click', async (e) => {
@@ -189,6 +189,38 @@ function initTabsProduct() {
 }
 initTabsProduct();
 
+function initSimilarNews() {
+    const slider = document.querySelector('.similar-news .swiper')    
+
+    if (slider) {
+        new Swiper(slider, {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            loop: true,
+            speed: 600,
+
+            pagination: {
+                el: slider.querySelector('.swiper-pagination'),
+                clickable: true
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                1000: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                }
+            }   
+        }) 
+    }
+}
+if ( window.matchMedia("(max-width: 1000px)").matches ) {
+    initSimilarNews();
+}
+
 function initSimilarProducts() {
     const slider = document.querySelector('.similar-products .swiper')    
 
@@ -200,7 +232,8 @@ function initSimilarProducts() {
             speed: 600,
 
             pagination: {
-                el: slider.querySelector('.swiper-pagination')
+                el: slider.querySelector('.swiper-pagination'),
+                clickable: true
             },
 
             breakpoints: {

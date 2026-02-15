@@ -8,8 +8,6 @@
     }
 
     &__items{
-        max-width: 1398px;
-        margin: 0 auto;
         @media (min-width: 1600px){
             display: grid;
             grid-template-columns: repeat(4, minmax(auto, 1fr));
@@ -18,5 +16,9 @@
     }
     .swiper-pagination{
         margin-top: 20px;
+        display: none;
+        @media (max-width: 1600px){
+            display: flex;
+        }
     }
 }

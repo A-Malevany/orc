@@ -16,6 +16,7 @@
 @import './modules/breadcrumbs';
 @import './modules/product-item';
 @import './modules/product-count';
+@import './modules/product-code';
 @import './modules/news-item';
 
 //Front
@@ -47,4 +48,5 @@
 @import './pages/product-card/similar-products';
 
 //Cart
+@import './pages/cart/cart';
 @import './pages/cart/cart-empty';
