@@ -301,6 +301,43 @@ function initPopups() {
 }
 initPopups();
 
+function openModal(popupId) {
+    const popupEl = document.querySelector(popupId);
+    const body = document.body;
+
+    if (!popupEl) return;
+
+    body.classList.add('popup-open');
+    popupEl.classList.add('active');
+
+    const closeBtn = popupEl.querySelector('.popup__close');
+    const closeBtnСompleted = popupEl.querySelector('.popup__completed');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            popupEl.classList.remove('active');
+            body.classList.remove('popup-open');
+        });
+    }
+
+    if (closeBtnСompleted) {
+        closeBtnСompleted.addEventListener('click', () => {
+            popupEl.classList.remove('active');
+            body.classList.remove('popup-open');
+        });
+    }
+}
+
+function closeModal(popupId) {
+    const popupEl = document.querySelector(popupId);
+    const body = document.body;
+
+    if (!popupEl) return;
+
+    popupEl.classList.remove('active');
+    body.classList.remove('popup-open');
+}
+
 function initSearchMain() {
     const btn = document.querySelectorAll('.header__search-btn');
     const searchMain = document.querySelector('.search-main');
@@ -327,6 +364,8 @@ function initMobileMenu() {
     const btn = document.querySelector('.header__menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeMobileMenu = document.querySelector('.mobile-menu__close');
+
+    if ( !btn || !mobileMenu || !closeMobileMenu ) return;
 
     btn.addEventListener('click', () => {
         mobileMenu.classList.add('active');
