@@ -27,8 +27,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: .3s ease;
         //Text
         color: var(--white);
+        @media (any-hover: hover){
+            &:hover{
+                background: var(--primary-dark);
+            }
+        }
         @media (min-width: 1920px){
             min-height: 190px;
         }

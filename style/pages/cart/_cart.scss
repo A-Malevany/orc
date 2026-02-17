@@ -183,7 +183,7 @@
         align-items: flex-start;
         > span{
             font-size: 24px;
-                @media (max-width: 1600px){
+            @media (max-width: 1600px){
                 font-size: 23px;
             }
             @media (max-width: 1280px){
@@ -220,16 +220,6 @@
             .input-wrapper{
                 width: 100%;
                 position: relative;
-                // label{
-                //     pointer-events: none;
-                //     transition: .3s ease;
-                //     position: absolute;
-                //     top: 29px;
-                //     left: 20px;
-                //     transform: translate(0, -50%);
-                //     //Text
-                //     color: var(--black);
-                // }
                 input, textarea{
                     appearance: none;
                     width: 100%;
@@ -240,12 +230,6 @@
                     &::placeholder{
                         color: inherit;
                     }
-                    // &:focus + label{
-                    //     top: 15px;
-                    //     //Text
-                    //     font-size: 11px;
-                    //     color: rgba(0, 0, 0, 0.5);
-                    // }
                 }
                 textarea{
                     resize: none;

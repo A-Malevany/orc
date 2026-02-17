@@ -35,6 +35,7 @@
         }
     }
     &__body{
+        max-width: 80%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -88,7 +89,8 @@
     &__icon{
         width: var(--spacing24);
         aspect-ratio: 4/4;
-        flex-shrink: 1;
+        flex-shrink: 0;
+        display: flex;
         svg{
             width: 100% !important;
             height: auto !important;

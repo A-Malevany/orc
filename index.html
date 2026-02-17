@@ -276,6 +276,7 @@
 
                     <a href="/" class="header__logo">
                         <img src="images/logo.svg" alt="">
+                        <img src="images/logo-mobile.svg" alt="" class="mobile">
                     </a>
                     
                     <div class="header__location">
@@ -285,10 +286,16 @@
 
                         <ul class="header__location-list">
                             <li>
-                                Санкт-Петербург
+                                <a href="#">Москва</a>
                             </li>
                             <li>
-                                Волгоград
+                                <a href="#">Санкт-Петербург</a>
+                            </li>
+                            <li>
+                                <a href="#">Краснодар</a>
+                            </li>
+                            <li>
+                                <a href="#">Екатеринбург</a>
                             </li>
                         </ul>
                     </div>
@@ -305,6 +312,13 @@
                             info@orcline.ru
                         </a>
                     </div>
+
+                    <button class="header__search-btn mobile">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.99915 10.0935C1.99915 14.5635 5.62274 18.1871 10.0926 18.1871C14.5625 18.1871 18.1861 14.5635 18.1861 10.0935C18.1861 5.62361 14.5625 2 10.0926 2C5.62274 2 1.99915 5.62361 1.99915 10.0935Z" stroke="#6C7481" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M22 22.0174L18.2075 18.2248" stroke="#6C7481" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
 
                     <div class="header__btns">
                         <button class="header__btn">
@@ -367,6 +381,94 @@
             </div>
         </header>
 
+        <div class="mobile-menu">
+            <header class="mobile-menu__header">
+                <img src="images/logo-mobile.svg" alt="" class="mobile-menu__logo">
+
+                <button type="button" class="mobile-menu__close">Закрыть</button>
+            </header>
+
+            <div class="mobile-menu__body">
+                <a href="#" class="header__catalog">
+                    Каталог
+                </a>
+
+                <nav>
+                    <ul class="header__menu">
+                        <li>
+                            <a href="#">
+                                Услуги
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                О компании
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mobile-menu__bottom">
+                <div class="mobile-menu__btns">
+                    <button class="header__btn">
+                        Быстрый заказ
+                    </button>
+    
+                    <button class="header__btn">
+                        Заказать звонок
+                    </button>
+                </div>
+
+                <div class="header__location">
+                    <div class="header__location-current">
+                        Москва
+                    </div>
+
+                    <ul class="header__location-list">
+                        <li>
+                            <a href="#">Москва</a>
+                        </li>
+                        <li>
+                            <a href="#">Санкт-Петербург</a>
+                        </li>
+                        <li>
+                            <a href="#">Краснодар</a>
+                        </li>
+                        <li>
+                            <a href="#">Екатеринбург</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="tel:+79998110078" class="header__call">
+                    +7 (999) 811-00-78
+                </a>
+
+                <div class="header__email">
+                    <span>
+                        Отправьте заявку:
+                    </span>
+                    <a href="mailto:info@orcline.ru">
+                        info@orcline.ru
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <main>
             <section class="promo">
                 <div class="container">
@@ -425,7 +527,7 @@
             <section class="catalog-front">
                 <div class="container">
                     <div class="catalog-front__inner">
-                        <a href="#" class="catalog-front__item" style="background-image: url('./images/catalog__front_1.webp');">
+                        <div class="catalog-front__item" style="background-image: url('./images/catalog__front_1.webp');">
                             <h3 class="catalog-front__item-title">
                                 Такелажное оборудование
                             </h3>
@@ -433,25 +535,25 @@
                             <div class="catalog-front__item-dscr">
                                 <ul>
                                     <li>
-                                        Талрепы
+                                        <a href="#">Талрепы</a>
                                     </li>
 
                                     <li>
-                                        Зажимы канатные
+                                        <a href="#">Зажимы канатные</a>
                                     </li>
 
                                     <li>
-                                        Коуши
+                                        <a href="#">Коуши</a>
                                     </li>
                                 </ul>
                             </div>
 
-                            <button type="button" class="catalog-front__item-btn">
+                            <a href="#" class="catalog-front__item-btn">
                                 Смотреть все
-                            </button>
-                        </a>
+                            </a>
+                        </div>
 
-                        <a href="#" class="catalog-front__item" style="background-image: url('./images/catalog__front_2.webp');">
+                        <div class="catalog-front__item" style="background-image: url('./images/catalog__front_2.webp');">
                             <h3 class="catalog-front__item-title">
                                 Тросы, канаты, цепи
                             </h3>
@@ -459,21 +561,21 @@
                             <div class="catalog-front__item-dscr">
                                 <ul>
                                     <li>
-                                        Канаты (тросы) стальные оцинкованные
+                                        <a href="#">Канаты (тросы) стальные оцинкованные</a>
                                     </li>
 
                                     <li>
-                                        Канаты (тросы) стальные оцинкованные в ПВХ оболочке
+                                        <a href="#">Канаты (тросы) стальные оцинкованные в ПВХ оболочке</a>
                                     </li>
                                 </ul>
                             </div>
 
-                            <button type="button" class="catalog-front__item-btn">
+                            <a href="#" class="catalog-front__item-btn">
                                 Смотреть все
-                            </button>
-                        </a>
+                            </a>
+                        </div>
 
-                        <a href="#" class="catalog-front__item" style="background-image: url('./images/catalog__front_3.webp');">
+                        <div class="catalog-front__item" style="background-image: url('./images/catalog__front_3.webp');">
                             <h3 class="catalog-front__item-title">
                                 Грузовые стропы
                             </h3>
@@ -481,23 +583,23 @@
                             <div class="catalog-front__item-dscr">
                                 <ul>
                                     <li>
-                                        Стропы текстильные
+                                        <a href="#">Стропы текстильные</a>
                                     </li>
 
                                     <li>
-                                        Стропы цепные
+                                        <a href="#">Стропы цепные</a>
                                     </li>
 
                                     <li>
-                                        Стропы канатные
+                                        <a href="#">Стропы канатные</a>
                                     </li>
                                 </ul>
                             </div>
 
-                            <button type="button" class="catalog-front__item-btn">
+                            <a href="#" class="catalog-front__item-btn">
                                 Смотреть все
-                            </button>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1005,6 +1107,16 @@
                 </div>
             </div>
         </footer>
+
+        <div class="search-main">
+            <form action="">
+                <input type="text" placeholder="Поиск на сайте">
+
+                <button type="submit" class="btn">
+                    Найти
+                </button>
+            </form>
+        </div>
     </div>
 
 	<script src="js/swiper-bundle.min.js"></script>

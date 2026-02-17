@@ -276,6 +276,7 @@
 
                     <a href="/" class="header__logo">
                         <img src="images/logo.svg" alt="">
+                        <img src="images/logo-mobile.svg" alt="" class="mobile">
                     </a>
                     
                     <div class="header__location">
@@ -305,6 +306,13 @@
                             info@orcline.ru
                         </a>
                     </div>
+
+                    <button class="header__search-btn mobile">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.99915 10.0935C1.99915 14.5635 5.62274 18.1871 10.0926 18.1871C14.5625 18.1871 18.1861 14.5635 18.1861 10.0935C18.1861 5.62361 14.5625 2 10.0926 2C5.62274 2 1.99915 5.62361 1.99915 10.0935Z" stroke="#6C7481" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M22 22.0174L18.2075 18.2248" stroke="#6C7481" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
 
                     <div class="header__btns">
                         <button class="header__btn">
@@ -367,6 +375,88 @@
             </div>
         </header>
 
+        <div class="mobile-menu">
+            <header class="mobile-menu__header">
+                <img src="images/logo-mobile.svg" alt="" class="mobile-menu__logo">
+
+                <button type="button" class="mobile-menu__close">Закрыть</button>
+            </header>
+
+            <div class="mobile-menu__body">
+                <a href="#" class="header__catalog">
+                    Каталог
+                </a>
+
+                <nav>
+                    <ul class="header__menu">
+                        <li>
+                            <a href="#">
+                                Услуги
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                О компании
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mobile-menu__bottom">
+                <div class="mobile-menu__btns">
+                    <button class="header__btn">
+                        Быстрый заказ
+                    </button>
+    
+                    <button class="header__btn">
+                        Заказать звонок
+                    </button>
+                </div>
+
+                <div class="header__location">
+                    <div class="header__location-current">
+                        Москва
+                    </div>
+
+                    <ul class="header__location-list">
+                        <li>
+                            Санкт-Петербург
+                        </li>
+                        <li>
+                            Волгоград
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="tel:+79998110078" class="header__call">
+                    +7 (999) 811-00-78
+                </a>
+
+                <div class="header__email">
+                    <span>
+                        Отправьте заявку:
+                    </span>
+                    <a href="mailto:info@orcline.ru">
+                        info@orcline.ru
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <main>
             <div class="breadcrumbs">
                 <div class="container">
@@ -384,504 +474,140 @@
                             </svg>
                         </span>
 
-                        <a href="#">
-                            Каталог
-                        </a>
-
-                        <span>
-                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect y="16.4874" width="19.0909" height="1" transform="rotate(-59.7261 0 16.4874)" fill="#D1DAE3" />
-                            </svg>
-                        </span>
-
                         <p>
-                            Такелажное оборудование
+                            Контакты
                         </p>
                     </div>
                 </div>
             </div>
 
-            <section class="catalog">
+            <section class="contacts">
                 <div class="container">
-                    <div class="catalog__inner">
-                        <h1 class="catalog__title title-section">
-                            Вертлюги такелажные для строительства, монтажа и промышленности
-                        </h1>
-
-                        <div class="catalog__filter">
-                            <div class="catalog__filter-body">
-                                <button type="button" class="catalog__filter-btn trigger-popup" data-popup="#popup-filter">
-                                    Фильтры
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.5 14C11.1569 14 12.5 15.3431 12.5 17C12.5 18.6568 11.1569 20 9.5 20C7.84315 20 6.5 18.6568 6.5 17C6.5 15.3431 7.84315 14 9.5 14Z" stroke="#6C7481" stroke-width="1.2" />
-                                        <path d="M14.5 4C12.8431 4 11.5 5.34314 11.5 7C11.5 8.65685 12.8431 10 14.5 10C16.1569 10 17.5 8.65685 17.5 7C17.5 5.34314 16.1569 4 14.5 4Z" stroke="#6C7481" stroke-width="1.2" />
-                                        <path d="M15 16.9585H22" stroke="#6C7481" stroke-width="1.2" stroke-linecap="round" />
-                                        <path d="M8.99999 6.95853H2" stroke="#6C7481" stroke-width="1.2" stroke-linecap="round" />
-                                        <path d="M2 16.9585H4" stroke="#6C7481" stroke-width="1.2" stroke-linecap="round" />
-                                        <path d="M22 6.95853H20" stroke="#6C7481" stroke-width="1.2" stroke-linecap="round" />
-                                    </svg>
-                                </button>
-
-                                <!-- <div class="catalog__filter-price">
-                                    <fieldset id="mse2_ms|price">
-                                        <h4 class="catalog__filter-name">Цена</h4>
-
-                                        <div class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                                            <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 0%;"></div>
-                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
-                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
-                                        </div>
-
-                                        <div class="mse2_number_inputs row">
-                                            <div class="col-md-6">
-                                                <label for="mse2_ms|price_0" class="d-flex align-items-center">
-                                                    <input type="text" name="ms|price" id="mse2_ms|price_0" value="23600" data-current-value="0" class="form-control ml-1" data-original-value="23600" data-decimal="0">
-                                                </label>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <label for="mse2_ms|price_1" class="d-flex align-items-center">
-                                                    <input type="text" name="ms|price" id="mse2_ms|price_1" value="29600" data-current-value="0" class="form-control ml-1" data-original-value="29600" data-decimal="0">
-                                                </label>
-                                            </div>   
-                                        </div>
-                                    </fieldset>
-                                </div> -->
-
-                                <div class="catalog__filter-size">
-                                    
-                                </div>
-
-                                <div class="catalog__filter-item catalog__filter-sort">
-                                    <span class="catalog__filter-item-name">
-                                        Сортировать
-                                    </span>
-                                    <select name="sort">
-                                        <option value="По цене">По цене</option>
-                                        <option value="По цене">По цене</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="catalog__filter-active">
-                                <ul class="catalog__filter-active-list">
-                                    <li>
-                                        <span>Бренд:</span>
-
-                                        <span>Союз</span>
-
-                                        <button type="button">
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15.75 16.0699L5.1434 5.46332" stroke="#6C7481" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M5.30273 15.9092L15.9093 5.30258" stroke="#6C7481" stroke-width="1.5" stroke-linecap="round" />
-                                            </svg>
-                                        </button>
-                                    </li>
-
-                                    <li>
-                                        <span>Страна производства:</span>
-                                        
-                                        <span>РФ</span>
-
-                                        <button type="button">
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15.75 16.0699L5.1434 5.46332" stroke="#6C7481" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M5.30273 15.9092L15.9093 5.30258" stroke="#6C7481" stroke-width="1.5" stroke-linecap="round" />
-                                            </svg>
-                                        </button>
-                                    </li>
-
-                                    <li>
-                                        <span>Материал:</span>
-                                        
-                                        <span>Сталь</span>
-
-                                        <button type="button">
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15.75 16.0699L5.1434 5.46332" stroke="#6C7481" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M5.30273 15.9092L15.9093 5.30258" stroke="#6C7481" stroke-width="1.5" stroke-linecap="round" />
-                                            </svg>
-                                        </button>
-                                    </li>
-
-                                    <li>
-                                        <span>Рабочая нагрузка:</span>
-                                        
-                                        <span>2т, 2.5т, 3т</span>
-
-                                        <button type="button">
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15.75 16.0699L5.1434 5.46332" stroke="#6C7481" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M5.30273 15.9092L15.9093 5.30258" stroke="#6C7481" stroke-width="1.5" stroke-linecap="round" />
-                                            </svg>
-                                        </button>
-                                    </li>
-                                </ul>
-
-                                <button type="button" class="catalog__filter-active-clean">
-                                    Очистить
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="catalog__products">
-                            <div class="product-item">
-                                <a href="#" class="product-item__img">
-                                    <img src="images/product__item.webp" alt="">
-                                </a>
-
-                                <div class="product-item__body">
-                                    <div class="product-code product-code" title="Скопировать">
-                                        <span>24949251</span>
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.5" y="0.5" width="8" height="8" rx="1.5" stroke="black" />
-                                            <rect x="2.5" y="2.5" width="8" height="8" rx="1.5" fill="#FAFBFC" stroke="black" />
-                                        </svg>
-                                    </div>
-
-                                    <a href="#">
-                                        <h5 class="product-item__name">
-                                            Блок монтажный с поворотным крюком под канат 4,5-5,6 мм СВПК БМ-1,0Ш-01
-                                        </h5>
-                                    </a>
-
-                                    <div class="product-item__price">
-                                        26 300 ₽
-                                    </div>
-
-                                    <div class="product-item__nav">
-                                        <div class="product-item__count product-count">
-                                            <button type="button" class="remove">
-                                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2H0V0H12V2Z" fill="#99A3AD" />
-                                                </svg>
-                                            </button>
-
-                                            <input type="number" name="count-product" value="1" readonly>
-
-                                            <button type="button" class="add">
-                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7 5H12V7H7V12H5V7H0V5H5V0H7V5Z" fill="#99A3AD" />
-                                                </svg>
-                                            </button>
-                                        </div>
-
-                                        <button type="button" class="product-item__add">
-                                            В корзину
-                                        </button> 
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="product-item">
-                                <a href="#" class="product-item__img">
-                                    <img src="images/product__item.webp" alt="">
-                                </a>
-
-                                <div class="product-item__body">
-                                    <div class="product-code product-code" title="Скопировать">
-                                        <span>24949251</span>
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.5" y="0.5" width="8" height="8" rx="1.5" stroke="black" />
-                                            <rect x="2.5" y="2.5" width="8" height="8" rx="1.5" fill="#FAFBFC" stroke="black" />
-                                        </svg>
-                                    </div>
-
-                                    <a href="#">
-                                        <h5 class="product-item__name">
-                                            Блок монтажный с поворотным крюком под канат 4,5-5,6 мм СВПК БМ-1,0Ш-01
-                                        </h5>
-                                    </a>
-
-                                    <div class="product-item__price">
-                                        26 300 ₽
-                                    </div>
-
-                                    <div class="product-item__nav">
-                                        <div class="product-item__count product-count">
-                                            <button type="button" class="remove">
-                                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2H0V0H12V2Z" fill="#99A3AD" />
-                                                </svg>
-                                            </button>
-
-                                            <input type="number" name="count-product" value="1" readonly>
-
-                                            <button type="button" class="add">
-                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7 5H12V7H7V12H5V7H0V5H5V0H7V5Z" fill="#99A3AD" />
-                                                </svg>
-                                            </button>
-                                        </div>
-
-                                        <button type="button" class="product-item__add">
-                                            В корзину
-                                        </button> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-item">
-                                <a href="#" class="product-item__img">
-                                    <img src="images/product__item.webp" alt="">
-                                </a>
-
-                                <div class="product-item__body">
-                                    <div class="product-code product-code" title="Скопировать">
-                                        <span>24949251</span>
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.5" y="0.5" width="8" height="8" rx="1.5" stroke="black" />
-                                            <rect x="2.5" y="2.5" width="8" height="8" rx="1.5" fill="#FAFBFC" stroke="black" />
-                                        </svg>
-                                    </div>
-
-                                    <a href="#">
-                                        <h5 class="product-item__name">
-                                            Блок монтажный с поворотным крюком под канат 4,5-5,6 мм СВПК БМ-1,0Ш-01
-                                        </h5>
-                                    </a>
-
-                                    <div class="product-item__price">
-                                        26 300 ₽
-                                    </div>
-
-                                    <div class="product-item__nav">
-                                        <div class="product-item__count product-count">
-                                            <button type="button" class="remove">
-                                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2H0V0H12V2Z" fill="#99A3AD" />
-                                                </svg>
-                                            </button>
-
-                                            <input type="number" name="count-product" value="1" readonly>
-
-                                            <button type="button" class="add">
-                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7 5H12V7H7V12H5V7H0V5H5V0H7V5Z" fill="#99A3AD" />
-                                                </svg>
-                                            </button>
-                                        </div>
-
-                                        <button type="button" class="product-item__add">
-                                            В корзину
-                                        </button> 
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="product-item">
-                                <a href="#" class="product-item__img">
-                                    <img src="images/product__item.webp" alt="">
-                                </a>
-
-                                <div class="product-item__body">
-                                    <div class="product-code product-code" title="Скопировать">
-                                        <span>24949251</span>
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.5" y="0.5" width="8" height="8" rx="1.5" stroke="black" />
-                                            <rect x="2.5" y="2.5" width="8" height="8" rx="1.5" fill="#FAFBFC" stroke="black" />
-                                        </svg>
-                                    </div>
-
-                                    <a href="#">
-                                        <h5 class="product-item__name">
-                                            Блок монтажный с поворотным крюком под канат 4,5-5,6 мм СВПК БМ-1,0Ш-01
-                                        </h5>
-                                    </a>
-
-                                    <div class="product-item__price">
-                                        26 300 ₽
-                                    </div>
-
-                                    <div class="product-item__nav">
-                                        <div class="product-item__count product-count">
-                                            <button type="button" class="remove">
-                                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2H0V0H12V2Z" fill="#99A3AD" />
-                                                </svg>
-                                            </button>
-
-                                            <input type="number" name="count-product" value="1" readonly>
-
-                                            <button type="button" class="add">
-                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7 5H12V7H7V12H5V7H0V5H5V0H7V5Z" fill="#99A3AD" />
-                                                </svg>
-                                            </button>
-                                        </div>
-
-                                        <button type="button" class="product-item__add">
-                                            В корзину
-                                        </button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="button" class="catalog__products-add">
-                            Показать ещё
-                        </button>
-
-                        <div class="catalog__products-pagination">
-                            <a href="#" class="catalog__products-pagination-prev">
-                                Назад
-                            </a>
-
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="current-page">
-                                        2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        3
-                                    </a>
-                                </li>
-                                <li>
-                                    ...
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        30
-                                    </a>
-                                </li>
-                            </ul>
-
-                            <a href="#" class="catalog__products-pagination-next">
-                                Вперед
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="calculation-form">
-                <div class="container">
-                    <div class="calculation-form__inner">
-                        <h2 class="title-section">
-                            Быстрый расчет стоимости
-                        </h2>
-
-                        <div class="calculation-form__body">
-                            <div class="calculation-form__content">
-                                <h3 class="calculation-form__title">
-                                    Заказать быстрый расчет стоимости
-                                </h3>
-
-                                <div class="calculation-form__dscr">
-                                    Оставьте заявку — мы быстро свяжемся с вами, уточним детали, предложим лучшее решение и рассчитаем цену с учётом объёма, региона и условий поставки. Работаем с любыми объёмами и под ваши задачи.
-                                </div>
-
-                                <img src="images/calculation_form.webp" alt="" class="calculation-form__img">
-
-                                <div class="calculation-form__contacts">
-                                    <p>
-                                        По всем вопросам свяжитесь с нами:
-                                    </p>
-
-                                    <ul>
-                                        <li>
-                                            <a href="tel:+79998110078" class="calculation-form__phone">
-                                                +7 (999) 811-00-78
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="mailto:info@orcline.ru">
-                                                info@orcline.ru
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <form action="" method="post" enctype="multipart/form-data">
-                                <div class="calculation-form__inputs">
-                                    <input type="text" name="name" placeholder="Ваше имя" required>
-    
-                                    <input type="email" name="email" placeholder="Электронная почта" required>
-    
-                                    <input type="tel" name="phone" placeholder="Телефон" required>
-    
-                                    <textarea name="message" placeholder="Подробности заказа и комментарии"></textarea>
-                                </div>
-
-                                <div class="calculation-form__file">
-                                    <span>Прикрепить файл к заявке</span>
-
-                                    <input type="file" name="file">
-                                </div>
-
-                                <div class="calculation-form__privacy">
-                                    <label>
-                                        <input type="checkbox" required>
-
-                                        <span>
-                                            Нажимая на кнопку “Отправить”, я соглашаюсь с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a>.
-                                        </span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" required>
-
-                                        <span>
-                                            Нажимая на кнопку "Отправить", я принимаю условия <a href="#" target="_blank">Пользовательского соглашения</a>.
-                                        </span>
-                                    </label>
-                                </div>
-
-                                <button type="submit" class="btn">Отправить</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about-us-front">
-                <div class="container">
-                    <div class="about-us-front__inner">
-                        <img src="images/about-us-front.svg" alt="" class="about-us-front__img">
-
-                        <div class="about-us-front__body">
-                            <h2 class="title-section">
-                                Открытая региональная Компания
+                    <h1 class="title-section">
+                        Контакты
+                    </h1>
+
+                    <div class="contacts__inner">
+                        <div class="contacts__top">
+                            <h2 class="contacts__title">
+                                Наши реквизиты
                             </h2>
 
-                            <div class="about-us-front__dscr">
-                                <p>
-                                    Давайте знакомиться! Мы молодая, но очень амбициозная компания на рынке такелажного оборудования. Наша главная цель не просто продавать, а выстраивать долгосрочные и честные отношения с каждым клиентом.
-                                </p>
-
-                                <p>
-                                    Мы верим, что основа успешного сотрудничества - это внимание к деталям. Прислушиваемся к вашим пожеланиям, помогаем с выбором и делаем всё, чтобы поставка была для вас простой и комфортной. Именно так мы работаем с первого дня.
-                                </p>
-
-                                <p>
-                                    Наша благодарность - это ваше доверие и рекомендации, которые наши первые клиенты уже начали давать своим коллегам. Мы очень этим гордимся.
-                                </p>
-
-                                <h3>
-                                    Что вы получите, работая с нами?
-                                </h3>
+                            <div class="contacts__info">
+                                <ul>
+                                    <li>
+                                        ООО «ОТКРЫТАЯ РЕГИОНАЛЬНАЯ КОМПАНИЯ»
+                                    </li>
+                                    <li>
+                                        ИНН 9727085490
+                                    </li>
+                                    <li>
+                                        КПП 772701001
+                                    </li>
+                                    <li>
+                                        ОГРН 1247700608143
+                                    </li>
+                                </ul>
 
                                 <ul>
                                     <li>
-                                        Качественное оборудование по справедливым ценам.
+                                        Банковские реквизиты:
                                     </li>
-
                                     <li>
-                                        Бесперебойную доставку по всей России точно в оговоренные сроки.
+                                        ПАО Сбербанк
                                     </li>
-
                                     <li>
-                                        Команду, для которой ваш проект действительно важен.
+                                        БИК 044525225
+                                    </li>
+                                    <li>
+                                        к/с 30101810400000000225
+                                    </li>
+                                    <li>
+                                        р/с 40702810638000501981
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+
+                        <div class="contacts__items">
+                            <div class="contacts__item">
+                                <div class="contacts__item-body">
+                                    <h3 class="contacts__item-title">
+                                        Адрес офиса
+                                    </h3>
+
+                                    <div class="contacts__item-info">
+                                        <div class="contacts__item-info-title">
+                                            Адрес офиса: 
+                                        </div>
+
+                                        <div class="contacts__item-info-dscr">
+                                            <a href="https://yandex.ru/maps/-/CLG9zBMC" target="_blank">140009, Московская область, г.Люберцы, дачный поселок Красково, Ново-Марусинский проезд, д.8с1</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="contacts__item-info">
+                                        <div class="contacts__item-info-title">
+                                            Режим работы: 
+                                        </div>
+
+                                        <div class="contacts__item-info-dscr">
+                                            пн-пт с 9:00-17:00<br>
+                                            (перерыв с 13:00-14:00)
+                                        </div>
+                                    </div>
+
+                                    <div class="contacts__item-info">
+                                        <div class="contacts__item-info-title">
+                                            Географ. координаты: 
+                                        </div>
+
+                                        <div class="contacts__item-info-dscr">
+                                            55.686774, 37.990480
+                                        </div>
+                                    </div>
+                                </div>
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff29249edb2c1334761acaff72795f104166550536583a832c33dd90a95021ba&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                            </div>
+
+                            <div class="contacts__item">
+                                <div class="contacts__item-body">
+                                    <h3 class="contacts__item-title">
+                                        Адрес офиса
+                                    </h3>
+
+                                    <div class="contacts__item-info">
+                                        <div class="contacts__item-info-title">
+                                            Адрес офиса: 
+                                        </div>
+
+                                        <div class="contacts__item-info-dscr">
+                                            <a href="https://yandex.ru/maps/-/CLG9zBMC" target="_blank">140009, Московская область, г.Люберцы, дачный поселок Красково, Ново-Марусинский проезд, д.8с1</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="contacts__item-info">
+                                        <div class="contacts__item-info-title">
+                                            Режим работы: 
+                                        </div>
+
+                                        <div class="contacts__item-info-dscr">
+                                            пн-пт с 9:00-17:00<br>
+                                            (перерыв с 13:00-14:00)
+                                        </div>
+                                    </div>
+
+                                    <div class="contacts__item-info">
+                                        <div class="contacts__item-info-title">
+                                            Географ. координаты: 
+                                        </div>
+
+                                        <div class="contacts__item-info-dscr">
+                                            55.686774, 37.990480
+                                        </div>
+                                    </div>
+                                </div>
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff29249edb2c1334761acaff72795f104166550536583a832c33dd90a95021ba&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
                             </div>
                         </div>
                     </div>
@@ -987,28 +713,73 @@
             </div>
         </footer>
 
-        <div id="popup-filter" class="popup popup-filter">
+        <div class="search-main">
+            <form action="">
+                <input type="text" placeholder="Поиск на сайте">
+
+                <button type="submit" class="btn">
+                    Найти
+                </button>
+            </form>
+        </div>
+
+        <div id="popup-call" class="popup popup-call">
             <div class="popup__body">
                 <div class="popup__close"></div>
 
                 <div class="popup__title title-section">
-                    Все фильтры
+                    Заказать звонок
                 </div>
 
-                <div class="popup-filter__body">
-                    <!-- Здесь будет form или как ты выведешь -->
+                <div class="popup-call__form">
+                     <form action="" method="post">
+                        <div class="input-wrapper">
+                            <input type="text" name="name" id="total-name" placeholder="ФИО контактного лица" required>
+                        </div>
 
-                    <div class="popup-filter__btns">
-                        <button type="button" class="popup-filter__clean">
-                            Очистить
-                        </button>
+                        <div class="input-wrapper">
+                            <input type="tel" name="phone" id="total-phone" placeholder="Номер телефона" required>
+                        </div>
 
-                        <!-- Здесь добавишь type submit или опять таки как выведешь -->
-                        <button class="btn">
-                            Применить
-                        </button>
-                    </div>
+                        <div class="popup-call__form-privacy">
+                            <label>
+                                <input type="checkbox" required>
+                                <span class="label">
+                                    Нажимая на кнопку “Отправить”, я соглашаюсь с 
+                                    <a href="#">Политикой в отношении обработки персональных данных</a>.
+                                </span>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" required>
+                                <span class="label">
+                                    Нажимая на кнопку "Отправить", я принимаю условия 
+                                    <a href="#">Пользовательского соглашения.</a>
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="popup-call__form-btn btn">Заказать звонок</button>
+                    </form>
                 </div>
+            </div>
+        </div>
+
+        <div id="popup-success" class="popup popup-success">
+            <div class="popup__body">
+                <div class="popup__close"></div>
+
+                <div class="popup__title title-section">
+                    Ваша заявка отправлена.
+                </div>
+
+                <div class="popup-success__dscr">
+                    Менеджер свяжется с Вами в ближайшее время.
+                </div>
+
+                <button type="button" class="popup__completed btn">
+                    ок
+                </button>
             </div>
         </div>
     </div>

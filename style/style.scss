@@ -18,6 +18,8 @@
 @import './modules/product-count';
 @import './modules/product-code';
 @import './modules/news-item';
+@import './modules/search-main';
+@import './modules/mobile-menu';
 
 //Front
 @import './pages/front/promo';
@@ -41,6 +43,9 @@
 
 //About us
 @import './pages/about-us/about-us';
+
+//Contacts
+@import './pages/contacts/contacts';
 
 //Product card
 @import './pages/product-card/product-card';

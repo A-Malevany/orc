@@ -24,6 +24,7 @@ html{
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+    position: relative;
     &::-webkit-scrollbar{
         width: 5px;
         background: 
