@@ -374,6 +374,12 @@ function initMobileMenu() {
     closeMobileMenu.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
     })
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.mobile-menu') && !e.target.closest('.header__menu-btn')) {
+            mobileMenu.classList.remove('active');
+        }
+    });
 }
 initMobileMenu();
 
