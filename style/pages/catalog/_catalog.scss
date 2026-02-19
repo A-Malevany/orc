@@ -35,6 +35,7 @@
             font-size: 16px;
         }
         &-item{
+            cursor: pointer;
             max-width: 240px;
             width: 100%;
             background: var(--bg-gray);
@@ -44,6 +45,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            position: relative;
             &::before{
                 content: "";
                 position: absolute;
@@ -70,6 +72,79 @@
                 font-size: 16px;
                 width: 100%;
             }
+            &-value{
+                margin-top: 2px;
+                max-width: 90%;
+                width: 100%;
+                overflow-x: auto;
+                white-space: nowrap;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+            &-drop-down{
+                position: absolute;
+                pointer-events: none;
+                opacity: 0;
+                transition: .3s ease;
+                z-index: 20;
+                top: calc(100% + 10px);
+                left: 0;
+                width: 100%;
+                background: var(--bg-gray);
+                border-radius: 6px;
+                padding: 20px;
+                &.active{
+                    pointer-events: auto;
+                    opacity: 1;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 12px;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        input{
+                            cursor: pointer;
+                            appearance: none;
+                            width: 26px;
+                            height: 26px;
+                            flex-shrink: 0;
+                            background: var(--white);
+                            border-radius: 4px;
+                            position: relative;
+                            &:checked::before{
+                                opacity: 1;
+                            }
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 14px;
+                                height: 9px;
+                                background-image: url("../images/icons/checkbox.svg");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                transition: .3s ease;
+                                pointer-events: none;
+                                opacity: 0;
+                            }
+                        }
+                        label{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        &-item-sort{
+            margin-left: auto;
         }
         &-active{
             margin-top: 12px;
@@ -77,6 +152,10 @@
             align-items: flex-end;
             justify-content: space-between;
             gap: 8px;
+            @media (max-width: 600px){
+                flex-direction: column;
+                align-items: flex-start;
+            }
             &-list{
                 display: flex;
                 flex-wrap: wrap;
@@ -88,6 +167,9 @@
                     display: flex;
                     align-items: center;
                     gap: 6px;
+                    @media (max-width: 600px){
+                        flex: 1 1 auto;
+                    }
                     button{
                         display: flex;
                     }
@@ -106,6 +188,9 @@
                     &:hover{
                         background: #8696a6;
                     }
+                }
+                @media (max-width: 600px){
+                    width: 100%;
                 }
             }
         }
@@ -196,6 +281,7 @@
         display: flex;
         align-items: center;
         gap: 20px;
+        min-height: 140px;
         &-img{
             max-width: 140px;
             aspect-ratio: 4/4;

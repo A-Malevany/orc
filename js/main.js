@@ -222,18 +222,21 @@ if ( window.matchMedia("(max-width: 1000px)").matches ) {
 }
 
 function initSimilarProducts() {
-    const slider = document.querySelector('.similar-products .swiper')    
+    const slider = document.querySelector('.similar-products .swiper');   
+    const slides = document.querySelectorAll('.similar-products .swiper-slide');
 
     if (slider) {
         new Swiper(slider, {
             slidesPerView: 3,
             spaceBetween: 24,
-            loop: true,
+            loop: slides.length > 3,
             speed: 600,
+            watchOverflow: true,
 
             pagination: {
                 el: slider.querySelector('.swiper-pagination'),
-                clickable: true
+                clickable: true,
+                dynamicBullets: false, 
             },
 
             breakpoints: {
@@ -411,3 +414,62 @@ function initListLocations() {
     });
 }
 initListLocations();
+
+function initPhoneMask() {
+    if (typeof IMask === 'undefined') return;
+
+    const phoneInputs = document.querySelectorAll('input[name="phone"]');
+
+    if ( phoneInputs.length == 0 ) return;
+
+    phoneInputs.forEach(input => {
+        IMask(input, {
+            mask: '+{7} (000) 000-00-00'
+        });
+    });
+}
+initPhoneMask();
+
+function initFilterDropdowns() {
+    const filterItems = document.querySelectorAll('.catalog__filter-item');
+
+    filterItems.forEach(item => {
+        const displayValue = item.querySelector('.catalog__filter-item-value');
+        const dropdown = item.querySelector('.catalog__filter-item-drop-down');
+
+        if (!dropdown) return;
+
+        item.addEventListener('click', (e) => {
+            if (e.target.closest('.catalog__filter-item-drop-down')) {
+                return; 
+            }
+
+            document.querySelectorAll('.catalog__filter-item-drop-down').forEach(el => {
+                if (el !== dropdown) el.classList.remove('active');
+            });
+
+            dropdown.classList.toggle('active');
+        });
+
+        item.addEventListener('change', () => {
+            const checked = item.querySelectorAll('input[type="checkbox"]:checked');
+            const labels = Array.from(checked).map(input => {
+                const label = input.closest('li').querySelector('label');
+                return label ? label.textContent.trim() : '';
+            });
+            
+            if (displayValue) {
+                displayValue.textContent = labels.join(', ');
+            }
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.catalog__filter-item')) {
+            document.querySelectorAll('.catalog__filter-item-drop-down').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+}
+initFilterDropdowns();
